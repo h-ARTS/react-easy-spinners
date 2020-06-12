@@ -4,17 +4,32 @@
   "description": "⚛️ A CSS-only spinners in React components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js",
+    "lint:fix": "prettier-eslint $PWD/**/*.js --write"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/h-ARTS/react-easy-spinners.git"
   },
-  "keywords": ["css-spinners", "react-spinners"],
+  "keywords": [
+    "css-spinners",
+    "react-spinners"
+  ],
   "author": "Hanan Khan Mufti",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/h-ARTS/react-easy-spinners/issues"
   },
-  "homepage": "https://github.com/h-ARTS/react-easy-spinners#readme"
+  "homepage": "https://github.com/h-ARTS/react-easy-spinners#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0"
+  }
 }
