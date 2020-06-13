@@ -9,7 +9,9 @@
     "build": "rm -rf dist && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint **/*.js",
-    "lint:fix": "prettier-eslint $PWD/**/*.js --write"
+    "lint:fix": "prettier-eslint $PWD/**/*.js --write",
+    "storybook": "start-storybook -p 9001 -c storybook",
+    "storybook:build": "build-storybook -c storybook"
   },
   "husky": {
     "hooks": {
@@ -40,6 +42,10 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "@storybook/addon-options": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0",
     "eslint": "^7.2.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.21.2",
@@ -51,6 +57,8 @@
     "lint-staged": "^10.2.10",
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "rollup": "^2.15.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",

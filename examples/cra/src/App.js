@@ -1,8 +1,14 @@
 import React from 'react'
-import { Heart } from 'react-easy-spinners'
+import { Heart, DualRing, Roller } from 'react-easy-spinners'
 
 function App() {
-  return <Heart />
+  return (
+    <>
+      <Heart />
+      <DualRing />
+      <Roller />
+    </>
+  )
 }
 
 export default App

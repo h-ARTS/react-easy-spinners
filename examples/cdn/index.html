@@ -19,10 +19,16 @@
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   <script src="./node_modules/react-easy-spinners/dist/bundle.umd.js"></script>
   <script>
-    const { DualRing } = window.ReactEasySpinners;
+    const { DualRin, Heart, Roller } = window.ReactEasySpinners;
     const root = document.getElementById('root');
-
-    ReactDOM.render(React.createElement(DualRing), root);
+    const MainElement = React.createElement(
+      React.Fragment,
+      null,
+      React.createElement(DualRing),
+      React.createElement(Heart),
+      React.createElement(Roller),
+    )
+    ReactDOM.render(MainElement, root);
   </script>
 </body>
 

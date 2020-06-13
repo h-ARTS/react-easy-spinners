@@ -1,3 +1,5 @@
 {
-  "plugins": ["prettier-eslint"]
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none"
 }

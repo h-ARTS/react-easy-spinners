@@ -1,6 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom/server')
-const { Heart } = require('react-easy-spinners')
+const { Heart, DualRing, Roller } = require('react-easy-spinners')
 const express = require('express')
 
 const port = 3000
@@ -13,7 +13,7 @@ const app = express()
 // })
 
 app.get('/', (req, res) => {
-  const el = React.createElement(Heart)
+  const el = React.createElement(React.Fragment, null, Heart, DualRing, Roller)
 
   const html = ReactDOM.renderToString(el)
 
