@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DualRing component should render correctly 1`] = `
+<div
+  className="lds-dual-ring"
+/>
+`;

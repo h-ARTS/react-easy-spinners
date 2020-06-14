@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heart component should render correctly 1`] = `
+<div
+  className="lds-heart"
+>
+  <div />
+</div>
+`;
