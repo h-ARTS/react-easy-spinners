@@ -15,7 +15,9 @@
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "prettier-eslint $PWD/**/*.js --write",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "storybook:build": "build-storybook -c storybook"
+    "storybook:build": "build-storybook -c storybook",
+    "predeploy": "npm run storybook:build",
+    "deploy": "gh-pages -d storybook-static"
   },
   "husky": {
     "pre-commit": "lint-staged",
@@ -44,7 +46,7 @@
   "bugs": {
     "url": "https://github.com/h-ARTS/react-easy-spinners/issues"
   },
-  "homepage": "https://github.com/h-ARTS/react-easy-spinners#readme",
+  "homepage": "https://h-arts.github.io/react-easy-spinners",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
@@ -63,6 +65,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^3.0.0",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lint-staged": "^10.2.10",
