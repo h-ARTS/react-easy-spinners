@@ -17,14 +17,18 @@
     "storybook:build": "build-storybook -c storybook"
   },
   "husky": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx,json,ts,tsx}": [
       "npm run lint:fix",
       "npm run test:staged",
       "git add"
-    ]
+    ],
+    "*.js": "eslint --cache --fix"
   },
   "repository": {
     "type": "git",
@@ -59,7 +63,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
-    "lint-staged": "^8.1.7",
+    "lint-staged": "^10.2.10",
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "react": "^16.13.1",
