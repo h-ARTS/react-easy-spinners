@@ -10,25 +10,25 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:staged": "jest --findRelatedTests",
     "lint": "eslint **/*.js",
     "lint:fix": "prettier-eslint $PWD/**/*.js --write",
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:build": "build-storybook -c storybook"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
       "npm run lint:fix",
+      "npm run test:staged",
       "git add"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/h-ARTS/react-easy-spinners.git"
+    "url": "https://github.com/h-ARTS/react-easy-spinners.git"
   },
   "keywords": [
     "css-spinners",
@@ -59,7 +59,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
-    "lint-staged": "^10.2.10",
+    "lint-staged": "^8.1.7",
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "react": "^16.13.1",
