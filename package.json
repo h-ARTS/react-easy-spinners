@@ -12,7 +12,7 @@
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "test:staged": "jest --findRelatedTests",
-    "lint": "eslint **/*.js",
+    "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "prettier-eslint $PWD/**/*.js --write",
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:build": "build-storybook -c storybook"
